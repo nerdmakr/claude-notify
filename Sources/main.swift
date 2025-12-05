@@ -9,7 +9,7 @@ extension Color {
 
 // MARK: - App Entry Point
 @main
-struct ClaudeNotifyApp: App {
+struct CNotifyApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
@@ -39,12 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         if let button = statusItem?.button {
             let config = NSImage.SymbolConfiguration(pointSize: 14, weight: .medium)
-            button.image = NSImage(systemSymbolName: "bell", accessibilityDescription: "Claude Notify")?
+            button.image = NSImage(systemSymbolName: "bell", accessibilityDescription: "CNotify")?
                 .withSymbolConfiguration(config)
         }
 
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "Claude Notify", action: nil, keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "CNotify", action: nil, keyEquivalent: ""))
         menu.items.first?.isEnabled = false
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Show History", action: #selector(showHistory), keyEquivalent: "h"))
@@ -232,7 +232,7 @@ class NotificationManager: ObservableObject {
 
     private var dataURL: URL {
         let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let appDir = appSupport.appendingPathComponent("ClaudeNotify")
+        let appDir = appSupport.appendingPathComponent("CNotify")
         try? FileManager.default.createDirectory(at: appDir, withIntermediateDirectories: true)
         return appDir.appendingPathComponent("notifications.jsonl")
     }
@@ -924,7 +924,7 @@ class HTTPServer {
             }
 
             listener?.start(queue: .global())
-            print("Claude Notify listening on port \(port)")
+            print("CNotify listening on port \(port)")
         } catch {
             print("Failed to start server: \(error)")
         }

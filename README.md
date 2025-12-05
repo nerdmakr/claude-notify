@@ -1,8 +1,8 @@
-# Claude Notify 🔔
+# CNotify 🔔
 
 A beautiful macOS notification app for Claude Code completion alerts.
 
-![ClaudeNotify](https://img.shields.io/badge/platform-macOS-blue.svg)
+![CNotify](https://img.shields.io/badge/platform-macOS-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -23,18 +23,18 @@ A beautiful macOS notification app for Claude Code completion alerts.
 
 ```bash
 brew tap nerdmakr/tap
-brew install --cask claude-notify
+brew install --cask cnotify
 ```
 
 ### Manual Installation
 
-1. Download the latest release from [Releases](https://github.com/nerdmakr/claude-notify/releases)
-2. Unzip and move `ClaudeNotify.app` to `/Applications`
+1. Download the latest release from [Releases](https://github.com/nerdmakr/cnotify/releases)
+2. Unzip and move `CNotify.app` to `/Applications`
 3. Run the app
 
 ## Usage
 
-### 1. Start ClaudeNotify
+### 1. Start CNotify
 
 Launch the app - it runs in your menu bar.
 
@@ -138,7 +138,7 @@ swift run
 
 ## API
 
-ClaudeNotify runs a local HTTP server on `http://127.0.0.1:19280`
+CNotify runs a local HTTP server on `http://127.0.0.1:19280`
 
 ### POST /notify
 

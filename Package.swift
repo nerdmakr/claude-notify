@@ -2,13 +2,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "ClaudeNotify",
+    name: "CNotify",
     platforms: [
         .macOS(.v13)
     ],
     targets: [
         .executableTarget(
-            name: "ClaudeNotify",
+            name: "CNotify",
             swiftSettings: [
                 .unsafeFlags(["-parse-as-library"])
             ]
