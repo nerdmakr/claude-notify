@@ -22,13 +22,12 @@ A beautiful macOS notification app for Claude Code completion alerts.
 ### Homebrew (Recommended)
 
 ```bash
-brew tap nerdmakr/tap
-brew install --cask cnotify
+brew install --cask nerdmakr/tap/cnotify
 ```
 
 ### Manual Installation
 
-1. Download the latest release from [Releases](https://github.com/nerdmakr/cnotify/releases)
+1. Download the latest release from [Releases](https://github.com/nerdmakr/claude-notify/releases)
 2. Unzip and move `CNotify.app` to `/Applications`
 3. Run the app
 
